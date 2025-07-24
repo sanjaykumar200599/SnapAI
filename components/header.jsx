@@ -16,7 +16,7 @@ export default function Header() {
   const path = usePathname();
 
   if (path.includes("/editor")) {
-    return null; // Hide header on editor page
+    return null;     // Hide header on editor page
   }
 
   return (
