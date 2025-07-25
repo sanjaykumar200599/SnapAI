@@ -3,16 +3,16 @@
 import React from "react";
 import { LayoutDashboard, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import { useStoreUser } from "@/hooks/use-store-user";
-import { BarLoader } from "react-spinners";
-import { Authenticated, Unauthenticated } from "convex/react";
+// import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+// import { useStoreUser } from "@/hooks/use-store-user";
+// import { BarLoader } from "react-spinners";
+// import { Authenticated, Unauthenticated } from "convex/react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
 export default function Header() {
-  const { isLoading } = useStoreUser();
+  // const { isLoading } = useStoreUser();
   const path = usePathname();
 
   if (path.includes("/editor")) {
@@ -27,8 +27,8 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="mr-10 md:mr-20">
           <Image
-            src="/logo-text.png"
-            alt="Pixxel Logo"
+            src="/pixxel-logo.png"
+            alt="SnapAI Logo"
             className="min-w-24 object-cover"
             width={96}
             height={24}
@@ -59,7 +59,7 @@ export default function Header() {
         )}
 
         {/* Auth Actions */}
-        <div className="flex items-center gap-3 ml-10 md:ml-20">
+        {/* <div className="flex items-center gap-3 ml-10 md:ml-20">
           <Authenticated>
             <Link href="/dashboard">
               <Button variant="glass" className="hidden sm:flex">
@@ -97,7 +97,7 @@ export default function Header() {
           <div className="fixed bottom-0 left-0 w-full z-40 flex justify-center">
             <BarLoader width={"95%"} color="#06b6d4" />
           </div>
-        )}
+        )} */}
       </div>
     </header>
   );
