@@ -3,7 +3,7 @@
 import React from "react";
 import { LayoutDashboard, Sparkles } from "lucide-react";
 import Link from "next/link";
-// import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 // import { useStoreUser } from "@/hooks/use-store-user";
 // import { BarLoader } from "react-spinners";
 // import { Authenticated, Unauthenticated } from "convex/react";
@@ -16,7 +16,7 @@ export default function Header() {
   const path = usePathname();
 
   if (path.includes("/editor")) {
-    return null;     // Hide header on editor page
+    return null; // Hide header on editor page
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Header() {
         <Link href="/" className="mr-10 md:mr-20">
           <Image
             src="/pixxel-logo.png"
-            alt="SnapAI Logo"
+            alt="Pixxel Logo"
             className="min-w-24 object-cover"
             width={96}
             height={24}
@@ -59,8 +59,8 @@ export default function Header() {
         )}
 
         {/* Auth Actions */}
-        {/* <div className="flex items-center gap-3 ml-10 md:ml-20">
-          <Authenticated>
+        <div className="flex items-center gap-3 ml-10 md:ml-20">
+          {/* <Authenticated> */}
             <Link href="/dashboard">
               <Button variant="glass" className="hidden sm:flex">
                 <LayoutDashboard className="h-4 w-4" />
@@ -79,9 +79,9 @@ export default function Header() {
               }}
               afterSignOutUrl="/"
             />
-          </Authenticated>
+          {/* </Authenticated> */}
 
-          <Unauthenticated>
+          {/* <Unauthenticated> */}
             <SignInButton>
               <Button variant="glass" className="hidden sm:flex">
                 Sign In
@@ -91,9 +91,9 @@ export default function Header() {
             <SignUpButton>
               <Button variant="primary">Get Started</Button>
             </SignUpButton>
-          </Unauthenticated>
+          {/* </Unauthenticated> */}
         </div>
-        {isLoading && (
+        {/* {isLoading && (
           <div className="fixed bottom-0 left-0 w-full z-40 flex justify-center">
             <BarLoader width={"95%"} color="#06b6d4" />
           </div>
