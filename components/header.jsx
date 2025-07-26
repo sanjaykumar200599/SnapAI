@@ -68,7 +68,7 @@ export default function Header() {
               </Button>
             </Link>
 
-            <UserButton
+            {/* <UserButton
               appearance={{
                 elements: {
                   avatarBox: "w-8 h-8 rounded-lg border border-white/20",
@@ -78,7 +78,7 @@ export default function Header() {
                 },
               }}
               afterSignOutUrl="/"
-            />
+            /> */}
           {/* </Authenticated> */}
 
           {/* <Unauthenticated> */}

@@ -10,7 +10,8 @@ export function ConvexClientProvider({ children }) {
   return <ConvexProvider
    client={convex}
    //use Auth
-  useAuth={useAuth}>
+  // useAuth={useAuth}
+  >
    
     {children}</ConvexProvider>;
 }
