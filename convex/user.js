@@ -1,4 +1,4 @@
-
+//This is available in Convex docs for connecting the database with clerk
 import { mutation } from "./_generated/server";
 
 export const store = mutation({
