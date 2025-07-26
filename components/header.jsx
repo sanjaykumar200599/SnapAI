@@ -4,15 +4,15 @@ import React from "react";
 import { LayoutDashboard, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-// import { useStoreUser } from "@/hooks/use-store-user";
-// import { BarLoader } from "react-spinners";
-// import { Authenticated, Unauthenticated } from "convex/react";
+import { useStoreUser } from "@/hooks/use-store-user";
+import { BarLoader } from "react-spinners";
+import { Authenticated, Unauthenticated } from "convex/react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
 export default function Header() {
-  // const { isLoading } = useStoreUser();
+  const { isLoading } = useStoreUser();
   const path = usePathname();
 
   if (path.includes("/editor")) {
@@ -60,7 +60,7 @@ export default function Header() {
 
         {/* Auth Actions */}
         <div className="flex items-center gap-3 ml-10 md:ml-20">
-          {/* <Authenticated> */}
+          <Authenticated>
             <Link href="/dashboard">
               <Button variant="glass" className="hidden sm:flex">
                 <LayoutDashboard className="h-4 w-4" />
@@ -68,7 +68,7 @@ export default function Header() {
               </Button>
             </Link>
 
-            {/* <UserButton
+            <UserButton
               appearance={{
                 elements: {
                   avatarBox: "w-8 h-8 rounded-lg border border-white/20",
@@ -78,10 +78,10 @@ export default function Header() {
                 },
               }}
               afterSignOutUrl="/"
-            /> */}
-          {/* </Authenticated> */}
+            />
+          </Authenticated>
 
-          {/* <Unauthenticated> */}
+          <Unauthenticated>
             <SignInButton>
               <Button variant="glass" className="hidden sm:flex">
                 Sign In
@@ -91,13 +91,13 @@ export default function Header() {
             <SignUpButton>
               <Button variant="primary">Get Started</Button>
             </SignUpButton>
-          {/* </Unauthenticated> */}
+          </Unauthenticated>
         </div>
-        {/* {isLoading && (
+        {isLoading && (
           <div className="fixed bottom-0 left-0 w-full z-40 flex justify-center">
             <BarLoader width={"95%"} color="#06b6d4" />
           </div>
-        )} */}
+        )}
       </div>
     </header>
   );
