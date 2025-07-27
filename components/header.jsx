@@ -39,13 +39,13 @@ export default function Header() {
           <div className="hidden md:flex space-x-6">
             <Link
               href="#features"
-              className="text-white font-medium transition-all duration-300 hover:text-cyan-400 cursor-pointer"
+              className="text-white font-medium transition-all duration-300 hover:text-cyan-400  cursor-pointer"
             >
               Features
             </Link>
             <Link
               href="#pricing"
-              className="text-white font-medium transition-all duration-300 hover:text-cyan-400 cursor-pointer"
+              className="text-white font-medium transition-all duration-300 hover:text-cyan-400  cursor-pointer"
             >
               Pricing
             </Link>
