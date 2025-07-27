@@ -62,7 +62,7 @@ export default function Header() {
         <div className="flex items-center gap-3 ml-10 md:ml-20">
           <Authenticated>
             <Link href="/dashboard">
-              <Button variant="glass" className="hidden sm:flex">
+              <Button variant="glass">
                 <LayoutDashboard className="h-4 w-4" />
                 <span className="hidden md:flex">Dashboard</span>
               </Button>
