@@ -107,7 +107,7 @@ const App = () => {
   return (
     <div className="pt-36">
       <HeroSection />
-      {/* <InteractiveStats /> */}
+      <InteractiveStats />
       <FeaturesSection />
       <PricingSection />
 
