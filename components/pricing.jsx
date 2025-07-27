@@ -2,6 +2,7 @@ import { useIntersectionObserver } from "@/hooks/use-landing-hooks";
 import { useAuth } from "@clerk/nextjs";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 const PricingCard = ({
   id,
@@ -32,6 +33,7 @@ const PricingCard = ({
       }
     } catch (error) {
       console.error("Checkout error:", error);
+      toast.error("Something went wrong" + error.message);
     }
   };
 
