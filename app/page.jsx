@@ -43,9 +43,9 @@ const HeroSection = () => {
                 Start Creating
               </Button>
             </Link>
-            <Button variant="glass" size="xl">
+            {/* <Button variant="glass" size="xl">
               Watch Demo
-            </Button>
+            </Button> */}
           </div>
         </div>
 
@@ -107,9 +107,9 @@ const App = () => {
   return (
     <div className="pt-36">
       <HeroSection />
-      {/* <InteractiveStats />
+      {/* <InteractiveStats /> */}
       <FeaturesSection />
-      <PricingSection /> */}
+      {/* <PricingSection /> */}
 
       {/* Final CTA Section */}
       <section className="py-20 text-center">
