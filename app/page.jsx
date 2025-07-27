@@ -109,7 +109,7 @@ const App = () => {
       <HeroSection />
       {/* <InteractiveStats /> */}
       <FeaturesSection />
-      {/* <PricingSection /> */}
+      <PricingSection />
 
       {/* Final CTA Section */}
       <section className="py-20 text-center">
