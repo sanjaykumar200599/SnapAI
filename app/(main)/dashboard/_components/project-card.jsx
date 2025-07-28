@@ -1,8 +1,8 @@
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-// import { Badge } from "@/components/ui/badge";
-// import { formatDistanceToNow } from "date-fns";
+import { Badge } from "@/components/ui/badge";
+import { formatDistanceToNow } from "date-fns";
 import { useConvexMutation } from "@/hooks/use-convex-query";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
@@ -12,9 +12,9 @@ export default function ProjectCard({ project, onEdit }) {
     api.projects.deleteProject
   );
 
-//   const lastUpdated = formatDistanceToNow(new Date(project.updatedAt), {
-//     addSuffix: true,
-//   });
+  const lastUpdated = formatDistanceToNow(new Date(project.updatedAt), {
+    addSuffix: true,
+  });
 
   const handleDelete = async () => {
     const confirmed = confirm(
@@ -68,7 +68,7 @@ export default function ProjectCard({ project, onEdit }) {
         <h3 className="font-semibold text-white mb-1 truncate">
           {project.title}
         </h3>
-{/* 
+
         <div className="flex items-center justify-between text-sm text-white/70">
           <span>Updated {lastUpdated}</span>
           <Badge
@@ -77,7 +77,7 @@ export default function ProjectCard({ project, onEdit }) {
           >
             {project.width} × {project.height}
           </Badge>
-        </div> */}
+        </div>
       </CardContent>
     </Card>
   );

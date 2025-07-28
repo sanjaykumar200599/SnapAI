@@ -14,6 +14,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PricingTable } from "@clerk/nextjs";
 
 export function UpgradeModal({ isOpen, onClose, restrictedTool, reason }) {
+  
   const getToolName = (toolId) => {
     const toolNames = {
       background: "AI Background Tools",
