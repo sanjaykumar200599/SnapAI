@@ -1,3 +1,5 @@
+//one task is we have input the background using prompt,and it will generate image with prompted background, this can done using imagekit.io website, where it transfers background to e-prompt, add this to code and modify.
+
 "use client";
 
 import React, { useState } from "react";
