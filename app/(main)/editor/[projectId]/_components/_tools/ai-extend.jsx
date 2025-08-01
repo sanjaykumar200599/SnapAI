@@ -1,3 +1,4 @@
+//In imagekit.io use bg-genfill.
 "use client";
 
 import React, { useState } from "react";
