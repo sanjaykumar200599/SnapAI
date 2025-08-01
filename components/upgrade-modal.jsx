@@ -26,7 +26,9 @@ export function UpgradeModal({ isOpen, onClose, restrictedTool, reason }) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-4xl bg-slate-800 border-white/10 max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-4xl bg-slate-800 border-white/10 max-h-[90vh] overflow-y-auto z-[80]">
+
+
         <DialogHeader>
           <div className="flex items-center gap-3">
             <Crown className="h-6 w-6 text-yellow-500" />
@@ -51,7 +53,9 @@ export function UpgradeModal({ isOpen, onClose, restrictedTool, reason }) {
             </Alert>
           )}
 
-          <PricingTable />
+          <div onClick={onClose}>
+              <PricingTable />
+          </div>
         </div>
 
         <DialogFooter className="justify-center">
