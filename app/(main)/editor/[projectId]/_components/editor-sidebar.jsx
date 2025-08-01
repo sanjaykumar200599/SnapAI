@@ -99,8 +99,8 @@ function renderToolContent(activeTool, project) {
       return <AdjustControls />;
     case "background":
       return <BackgroundControls project={project} />;
-    // case "ai_extender":
-    //   return <AIExtenderControls project={project} />;
+    case "ai_extender":
+      return <AIExtenderControls project={project} />;
     case "text":
       return <TextControls />;
     // case "ai_edit":
