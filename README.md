@@ -1,1 +1,1 @@
-
+Snap AI is an AI-powered image editor inspired by Lightroom, built using Next.js, JavaScript, Fabric.js, Image.io, and Unsplash AI. It offers users advanced editing tools like background removal, cropping, resizing, and image extension. Premium features are unlocked through a subscription model, providing a seamless and intelligent photo editing experience
